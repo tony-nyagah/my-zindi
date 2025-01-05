@@ -1,23 +1,27 @@
 [project]
 name = "my-zindi"
 version = "0.1.0"
-description = "My solutions to Zindi competitions"
-authors = [{ name = "Antony Nyagah", email = "tony.m.nyagah@gmail.com" }]
+description = "Default template for PDM package"
+authors = [
+    { name = "Antony Nyagah", email = "tony.m.nyagah@gmail.com" },
+]
 dependencies = [
-    "jupyterlab>=4.3.0",
+    "jupyterlab>=4.3.4",
     "pandas>=2.2.3",
     "seaborn>=0.13.2",
-    "scikit-learn>=1.5.2",
-    "matplotlib>=3.9.2",
-    "numpy>=2.1.2",
+    "scikit-learn>=1.6.0",
+    "matplotlib>=3.10.0",
+    "numpy>=2.2.1",
 ]
 readme = "README.md"
-requires-python = ">= 3.8"
+requires-python = "==3.12.*"
+license = {text = "MIT"}
 
-[tool.rye]
-managed = true
-virtual = true
-dev-dependencies = [
+[tool.pdm]
+distribution = false
+
+[dependency-groups]
+dev = [
     "isort>=5.13.2",
-    "ruff>=0.7.1",
+    "ruff>=0.8.6",
 ]
